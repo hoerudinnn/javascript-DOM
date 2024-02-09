@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+    <h1>My To-Do List</h1>
+    <input type="text" id="taskInput" placeholder="Enter a task...">
+    <button id="addTask">Add Task</button>
+    <ul id="taskList"></ul>
+
+    <script>
+        // Mendapatkan elemen-elemen yang dibutuhkan
+        var taskInput = document.getElementById("taskInput");
+        var addTaskButton = document.getElementById("addTask");
+        var taskList = document.getElementById("taskList");
+
+        // Menambahkan event listener untuk tombol "Add Task"
+        addTaskButton.addEventListener("click", function() {
+            // Membuat elemen li baru untuk menampung task
+            var newTask = document.createElement("li");
+            // Menambahkan teks task dari input ke elemen li
+            newTask.textContent = taskInput.value;
+            // Menambahkan elemen li ke dalam ul taskList
+            taskList.appendChild(newTask);
+            // Mengosongkan input setelah task ditambahkan
+            taskInput.value = "";
+        });
+    </script>
+</body>
+</html>

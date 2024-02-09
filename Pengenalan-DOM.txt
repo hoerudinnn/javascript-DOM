@@ -1,0 +1,90 @@
+### Document Object Model (DOM):
+DOM merupakan representasi struktural dari dokumen HTML yang memungkinkan JavaScript untuk berinteraksi dan 
+mengubah konten, struktur, dan gaya halaman web secara dinamis. DOM mengorganisir elemen-elemen HTML sebagai 
+objek dalam sebuah pohon (tree) yang dapat dimanipulasi.
+
+Contoh:
+Misalkan kita memiliki dokumen HTML sederhana seperti ini:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contoh DOM</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Hello, World!</h1>
+        <p>This is a paragraph.</p>
+    </div>
+
+    <button id="changeText">Ubah teks</button>
+
+    <script>
+        // Mendapatkan elemen dengan id "container"
+        var container = document.getElementById("container");
+        // Menambahkan teks baru ke dalam elemen tersebut
+        container.innerHTML += "<p>Ini adalah paragraf baru.</p>";
+
+        // Mendapatkan elemen button dengan id "changeText"
+        var button = document.getElementById("changeText");
+        // Menambahkan event listener untuk mengubah teks pada klik tombol
+        button.addEventListener("click", function() {
+            container.innerHTML = "<h1>Teks sudah diubah!</h1>";
+        });
+    </script>
+</body>
+</html>
+```
+
+Dalam contoh di atas, kita menggunakan DOM untuk:
+1. Mendapatkan elemen dengan id "container" dan menambahkan paragraf baru ke dalamnya.
+2. Mendapatkan elemen button dengan id "changeText" dan menambahkan event listener agar 
+ketika tombol diklik, teks pada elemen "container" diubah menjadi teks baru.
+
+### JavaScript:
+JavaScript adalah bahasa pemrograman yang digunakan untuk membuat halaman web menjadi interaktif.
+Dengan JavaScript, Anda dapat mengontrol perilaku, tampilan, dan interaksi di halaman web.
+
+Contoh Proyek Nyata:
+Sebagai contoh proyek nyata, kita bisa membuat sebuah aplikasi to-do list sederhana menggunakan JavaScript dan DOM. 
+Berikut adalah contoh implementasinya:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple To-Do List</title>
+</head>
+<body>
+    <h1>My To-Do List</h1>
+    <input type="text" id="taskInput" placeholder="Enter a task...">
+    <button id="addTask">Add Task</button>
+    <ul id="taskList"></ul>
+
+    <script>
+        // Mendapatkan elemen-elemen yang dibutuhkan
+        var taskInput = document.getElementById("taskInput");
+        var addTaskButton = document.getElementById("addTask");
+        var taskList = document.getElementById("taskList");
+
+        // Menambahkan event listener untuk tombol "Add Task"
+        addTaskButton.addEventListener("click", function() {
+            // Membuat elemen li baru untuk menampung task
+            var newTask = document.createElement("li");
+            // Menambahkan teks task dari input ke elemen li
+            newTask.textContent = taskInput.value;
+            // Menambahkan elemen li ke dalam ul taskList
+            taskList.appendChild(newTask);
+            // Mengosongkan input setelah task ditambahkan
+            taskInput.value = "";
+        });
+    </script>
+</body>
+</html>
+```
+
+Dalam contoh proyek to-do list di atas, kita menggunakan JavaScript untuk:
+1. Mendapatkan elemen input dan button.
+2. Menambahkan event listener untuk button agar ketika diklik, task baru ditambahkan ke dalam daftar.
+3. Membuat elemen li baru untuk menampilkan task yang dimasukkan oleh pengguna.
+4. Menambahkan elemen li tersebut ke dalam ul (unordered list) yang menampung daftar task.
