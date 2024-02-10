@@ -1,0 +1,69 @@
+Tentu, saya akan menjelaskan tentang Node di DOM (Document Object Model) JavaScript beserta contohnya.
+
+### Node di DOM:
+
+Node adalah objek dasar dalam DOM yang merepresentasikan elemen, atribut, dan teks dalam dokumen. Setiap elemen, 
+atribut, dan teks dalam dokumen HTML adalah node. Node memiliki beberapa jenis, di antaranya:
+
+1. **Element Node**: Merepresentasikan elemen HTML, seperti `<div>`, `<p>`, `<h1>`, dan lain-lain.
+
+2. **Text Node**: Merepresentasikan teks di dalam elemen HTML.
+
+3. **Attribute Node**: Merepresentasikan atribut dari sebuah elemen HTML.
+
+4. **Comment Node**: Merepresentasikan komentar HTML.
+
+### Contoh Penggunaan Node:
+
+Misalkan kita memiliki dokumen HTML sederhana seperti berikut:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contoh Node DOM</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Hello, World!</h1>
+        <p>This is a paragraph.</p>
+    </div>
+</body>
+</html>
+```
+
+#### Contoh 1: Mengakses Element Node
+```javascript
+// Mendapatkan elemen dengan id "container"
+var container = document.getElementById("container");
+// Menampilkan tagName dari elemen tersebut (biasanya "DIV")
+console.log(container.tagName);
+```
+
+#### Contoh 2: Mengakses dan Memanipulasi Text Node
+```javascript
+// Mendapatkan elemen h1 (element node)
+var heading = document.querySelector("h1");
+// Mendapatkan child pertama dari elemen h1 (text node)
+var textNode = heading.childNodes[0];
+// Menampilkan teks dari text node tersebut
+console.log(textNode.nodeValue);
+// Mengubah teks dari text node tersebut
+textNode.nodeValue = "Hello, Greetings!";
+```
+
+#### Contoh 3: Menambahkan Element Node Baru
+```javascript
+// Membuat elemen baru (div)
+var newDiv = document.createElement("div");
+// Membuat text node baru
+var newText = document.createTextNode("This is a new paragraph.");
+// Menambahkan text node ke dalam elemen baru (div)
+newDiv.appendChild(newText);
+// Menambahkan elemen baru ke dalam elemen dengan id "container"
+container.appendChild(newDiv);
+```
+
+### Penjelasan Singkat:
+- Contoh pertama menunjukkan cara mendapatkan dan menggunakan element node.
+- Contoh kedua menunjukkan cara mendapatkan dan memanipulasi text node dalam sebuah elemen.
+- Contoh ketiga menunjukkan cara membuat elemen baru dan menambahkannya ke dalam dokumen.
