@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Method</title>
+</head>
+<body>
+    <ul id="menu">
+        <li id="first">First</li>
+        <li id="second">Second</li>
+        <li id="third">Third</li>
+    </ul>
+
+    <script>
+        // Mendapatkan elemen dengan id "menu"
+        const menu = document.getElementById("menu");
+        menu.removeChild(document.getElementById("first")); // Menghapus elemen dengan id "first" dari dalam elemen "menu"
+        menu.removeChild(document.getElementById("second")); // Menghapus elemen dengan id "second" dari dalam elemen "menu"
+        
+        // Membuat elemen baru (li)
+        const newLi = document.createElement("li");
+        newLi.textContent = "Fourth"; // Menambahkan teks "Fourth" ke dalam elemen baru
+        menu.appendChild(newLi); // Menambahkan elemen baru sebagai anak terakhir dari elemen "menu"
+        console.info(newLi)
+    </script>
+</body>
+</html>
