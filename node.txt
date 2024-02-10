@@ -67,3 +67,45 @@ container.appendChild(newDiv);
 - Contoh pertama menunjukkan cara mendapatkan dan menggunakan element node.
 - Contoh kedua menunjukkan cara mendapatkan dan memanipulasi text node dalam sebuah elemen.
 - Contoh ketiga menunjukkan cara membuat elemen baru dan menambahkannya ke dalam dokumen.
+
+// Node Property
+Properti-node dalam DOM JavaScript mengacu pada properti yang dimiliki oleh setiap node dalam pohon DOM. 
+Properti ini memungkinkan kita untuk mengakses dan memanipulasi informasi yang terkait dengan node, seperti atribut, teks, tipe node, dan lain-lain.
+Berikut adalah beberapa properti-node umum yang sering digunakan:
+
+1. **nodeType**: Properti ini memberikan tipe node dalam bentuk angka. Misalnya, 1 untuk elemen, 3 untuk teks, dan sebagainya.
+
+2. **nodeName**: Properti ini memberikan nama node. Untuk elemen, ini adalah nama tagnya. Untuk teks, ini adalah `#text`.
+
+3. **nodeValue**: Properti ini memberikan atau menetapkan nilai dari node. Untuk elemen, ini biasanya null. Untuk teks, ini adalah teks aktual.
+
+4. **parentNode**: Properti ini memberikan node induk dari node yang bersangkutan.
+
+5. **childNodes**: Properti ini memberikan daftar node anak dari node yang bersangkutan dalam bentuk NodeList.
+
+6. **firstChild**: Properti ini memberikan node pertama dalam daftar node anak.
+
+7. **lastChild**: Properti ini memberikan node terakhir dalam daftar node anak.
+
+8. **previousSibling**: Properti ini memberikan node sebelumnya dalam daftar node saudara.
+
+9. **nextSibling**: Properti ini memberikan node berikutnya dalam daftar node saudara.
+
+Berikut adalah contoh penggunaan properti-node:
+
+```javascript
+// Mendapatkan elemen dengan id "container"
+var container = document.getElementById("container");
+
+// Menampilkan tipe node dan nama node dari elemen "container"
+console.log(container.nodeType); // Output: 1 (elemen)
+console.log(container.nodeName); // Output: DIV
+
+// Menampilkan node anak pertama dari elemen "container"
+console.log(container.firstChild);
+
+// Menampilkan node saudara berikutnya dari elemen "container"
+console.log(container.nextSibling);
+```
+
+Dengan menggunakan properti-node, Anda dapat mengakses dan memanipulasi struktur DOM dengan lebih fleksibel.
