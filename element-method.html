@@ -7,15 +7,14 @@
 </head>
 <body>
     <div id="content" class="content">
-        <h1>Belajar JavaScript DOM</h1>
-        <p>Selamat datang di belajar javascript dom</p>
+        <h1 id="title">Belajar JavaScript DOM</h1>
+        <p id="description">Selamat datang di belajar javascript dom</p>
     </div>
 
     <script>
-        const content = document.getElementById("content");
-        console.info(content.id);
-        console.info(content.className);
-        console.info(content.tagName);
+        const title = document.getElementById("title");
+        title.remove();
+        
     </script>
 </body>
 </html>
