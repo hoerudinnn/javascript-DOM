@@ -9,16 +9,23 @@
     <div id="content" class="content"></div>
 
     <script>
+        // Mengambil elemen dengan ID "content" dan menyimpannya di dalam variabel content
         const content = document.getElementById("content");
-
+    
+        // Membuat elemen h1 baru
         const title = document.createElement("h1");
+        // Menambahkan teks "Belajar JavaScript DOM" ke dalam elemen h1
         title.textContent = "Belajar JavaScript DOM";
+        // Menambahkan elemen h1 ke dalam elemen dengan ID "content"
         content.appendChild(title);
-
+    
+        // Membuat elemen p baru
         const description = document.createElement("p");
+        // Menambahkan teks "Selamat Belajar JavaScript DOM" ke dalam elemen p
         description.textContent = "Selamat Belajar JavaScript DOM";
+        // Menambahkan elemen p ke dalam elemen dengan ID "content"
         content.appendChild(description);
-        
     </script>
+        
 </body>
 </html>
